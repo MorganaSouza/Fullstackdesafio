@@ -1,0 +1,23 @@
+{
+  "name": "frontend-plantation",
+  "version": "1.0.0",
+  "description": "Frontend para gerenciamento de categorias e plantações.",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "axios": "^1.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^3.0.1"
+  },
+  "author": "MorganaSouza",
+  "license": "MIT"
+}

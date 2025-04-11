@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Ferramentas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Usuários</a>
+    <a href="plantations.html">Plantações</a>
+    <a href="tools.html">Ferramentas</a>
+    <a href="category.html">Categorias</a>
+    <a href="fertilizer.html">Fertilizantes</a>
+</nav>
+    
+  </nav>
+
+  <h1>Ferramentas Cadastradas</h1>
+  <button id="addToolBtn">Adicionar Ferramenta</button>
+
+  <table id="toolsTable">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Responsável</th>
+        <th>Descrição</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- As ferramentas serão listadas aqui via JS -->
+    </tbody>
+  </table>
+
+  <!-- Modal para adicionar/editar ferramenta -->
+  <div id="toolModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitleTool">Adicionar Ferramenta</h2>
+      <form id="toolForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="description">Descrição:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="type">Tipo:</label>
+        <select id="type" name="type" required>
+          <option value="shovel">Pá</option>
+          <option value="rake">Rastele</option>
+          <option value="pruningShears">Tesoura de poda</option>
+          <option value="hoe">Enxada</option>
+          <option value="spade">Espadeiro</option>
+          <option value="trowel">Pá de jardim</option>
+          <option value="wheelbarrow">Carrinho de mão</option>
+          <option value="lawnMower">Cortador de grama</option>
+          <option value="gardenFork">Forquilha de jardim</option>
+          <option value="hedgeTrimmer">Podadora de cerca</option>
+        </select>
+                
+        <label for="responsible">Responsável:</label>
+        <select id="responsible" name="responsible" required>
+          <!-- Os usuários serão carregados aqui via JS -->
+        </select>
+
+        <button type="submit" id="saveToolBtn">Salvar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/tool.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "name": "plantation-management-api",
+    "version": "1.0.0",
+    "description": "API para gerenciamento de usuários, plantações, categorias, ferramentas e Fertilizantes",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "author": "Geraldo Gomes e Morgana Souza",
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.5.0",
+        "express": "^4.21.0",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^7.8.1",
+        "punycode": "^2.3.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}

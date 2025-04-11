@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Fertilizantes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Usuários</a>
+        <a href="plantations.html">Plantações</a>
+        <a href="tools.html">Ferramentas</a>
+        <a href="category.html">Categorias</a>
+        <a href="fertilizer.html">Fertilizantes</a>
+    </nav>
+
+    <h1>Fertilizantes Cadastrados</h1>
+    <button id="addFertilizerBtn">Adicionar Fertilizante</button>
+
+    <table id="fertilizersTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Quantidade (kg)</th>
+                <th>Data de Aplicação</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Fertilizantes via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal -->
+    <div id="fertilizerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitleFertilizer">Adicionar Fertilizante</h2>
+            <form id="fertilizerForm">
+                <label for="nameFertilizer">Nome:</label>
+                <input type="text" id="nameFertilizer" name="name" required>
+
+                <label for="typeFertilizer">Tipo:</label>
+                <select id="typeFertilizer" name="type" required>
+                    <option value="Orgânico">Orgânico</option>
+                    <option value="Mineral">Mineral</option>
+                </select>
+
+                <label for="amountFertilizer">Quantidade (kg):</label>
+                <input type="number" id="amountFertilizer" name="amount" required>
+
+                <label for="applyDate">Data de Aplicação:</label>
+                <input type="date" id="applyDate" name="applyDate" required>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/fertilizer.js"></script>
+</body>
+</html>

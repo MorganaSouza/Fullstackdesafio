@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Categorias</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Usuários</a>
+        <a href="plantations.html">Plantações</a>
+        <a href="tools.html">Ferramentas</a>
+        <a href="category.html">Categorias</a>
+        <a href="fertilizer.html">Fertilizantes</a>
+    </nav>
+
+    <h1>Categorias Cadastradas</h1>
+    <button id="addCategoryBtn">Adicionar Categoria</button>
+
+    <table id="categoriesTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo de Cultura</th>
+                <th>Fase de Crescimento</th>
+                <th>Temporada de Plantio</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As categorias serão listadas aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar categoria -->
+    <div id="categoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitleCategory">Adicionar Categoria</h2>
+            <form id="categoryForm">
+                <label for="nameCategory">Nome:</label>
+                <input type="text" id="nameCategory" name="name" required>
+
+                <label for="type">Tipo de Cultura:</label>
+                <select id="type" name="type" required>
+                    <option value="Hortaliças">Hortaliças</option>
+                    <option value="Frutíferas">Frutíferas</option>
+                    <option value="Leguminosas">Leguminosas</option>
+                </select>
+
+                <label for="growthPhase">Fase de Crescimento:</label>
+                <select id="growthPhase" name="growthPhase" required>
+                    <option value="Semente">Semente</option>
+                    <option value="Crescendo">Crescendo</option>
+                    <option value="Madura">Madura</option>
+                    <option value="Colhida">Colhida</option>
+                </select>
+
+                <label for="season">Temporada de Plantio:</label>
+                <select id="season" name="season" required>
+                    <option value="Verão">Verão</option>
+                    <option value="Outono">Outono</option>
+                    <option value="Inverno">Inverno</option>
+                    <option value="Primavera">Primavera</option>
+                </select>
+
+                <button type="submit" id="saveCategoryBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/category.js"></script>
+</body>
+</html>
